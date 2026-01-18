@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true, // Recommended for SEO (pre-renders content)
+  ssr: false, // Static site generation for GitHub Pages
+
+  // Set base URL for GitHub Pages
+  app: {
+    baseURL: '/hsorchestra-website/', // Your repo name
+  },
+
   modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/eslint'],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
