@@ -10,7 +10,7 @@ const { data: blogPosts } = await useAsyncData(
 
 <template>
   <div>
-    <h1>Welcome to HSOrchestra</h1>
+    <h1>TEST</h1>
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
