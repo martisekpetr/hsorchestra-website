@@ -11,15 +11,19 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
 
-  // i18n configuration matching Decap CMS setup
+  // i18n configuration - using for routing only
+  // Translations are loaded via Nuxt Content (CMS-editable) using useTexts() composable
   i18n: {
     locales: [
+      { code: 'cs', language: 'cs-CZ', name: 'Čeština' },
       { code: 'en', language: 'en-US', name: 'English' },
       { code: 'de', language: 'de-DE', name: 'Deutsch' },
-      { code: 'fr', language: 'fr-FR', name: 'Français' }
     ],
-    defaultLocale: 'en',
-    strategy: 'prefix_except_default', // URLs: /en/page, /de/page, /page (for default)
+    defaultLocale: 'cs',
+    strategy: 'prefix_except_default', // URLs: /en/page, /de/page, /page (for default cs)
+    detectBrowserLanguage: false,
+    // Don't use i18n's message loading - we load from Nuxt Content instead
+    vueI18n: './i18n.config.ts',
   },
 
   nitro: {

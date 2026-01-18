@@ -1,0 +1,95 @@
+siteName: "Horáček Swing Orchestra"
+siteDescription: "Offizielle Website der Prager Big Band Horáček Swing Orchestra, die hauptsächlich Swing-, Film- und Tanzmusik spielt. Wir organisieren eigene Konzerte und Tanzabende und spielen gerne auf Ihrem Ball, Ihrer Firmenveranstaltung oder Hochzeit."
+
+# Navigation
+nav:
+  home: "Startseite"
+  about: "Über uns"
+  concerts: "Konzerte"
+  members: "Mitglieder"
+  repertoire: "Repertoire"
+  videos: "Videos"
+  contact: "Kontakt"
+
+# Hero section
+hero:
+  title: "Horáček Swing Orchestra"
+  subtitle: "Willkommen auf der Website des Horáček Swing Orchestra. Wir sind eine Big Band, die hauptsächlich Swing-, Tanz- und Filmmusik spielt. Besuchen Sie uns bei einem unserer Konzerte in Prag und Umgebung. Gerne spielen wir auch bei Ihrer Veranstaltung."
+
+# Upcoming concerts
+upcomingConcerts:
+  heading: "Kommende Auftritte"
+  moreButton: "Mehr"
+  noConcerts: "Derzeit sind keine Konzerte geplant."
+
+# About section
+about:
+  heading: "Über uns"
+  mainText: "Das Horáček Swing Orchestra ist eine Prager Big Band, die Swing-, Film- und Tanzmusik spielt. Wir sind jedoch nicht auf ein Genre beschränkt und in unserem Repertoire finden Sie auch Rock- und Pop-Hits im Big-Band-Arrangement. Derzeit haben wir {{memberCount}} Musiker, einen Sänger und eine Sängerin, dazu gesellen sich oft unsere hervorragenden Gastvokalistinnen, dank derer bei manchen Stücken fünfstimmige Harmonien von der Bühne erklingen. Wir veranstalten eigene Konzerte und Tanzabende, meist in der Vinohrady-Brauerei oder im Theater za Plotem, sind aber auch immer auf der Suche nach neuen Veranstaltungsorten. Gerne spielen wir auch auf Bällen, Firmenevents oder Hochzeiten. Wir sind kein professionelles Ensemble, aber das Spielen macht uns Spaß und wir sind ein zuverlässiges, freundliches Kollektiv von Enthusiasten."
+
+  historyHeading: "Geschichte"
+  historyText: "Die Big Band wurde im März 2009 gegründet, als wir uns von der Grundschule Prof. Švejcar in Prag 4 selbstständig machten, wo wir als Schulband tätig waren. Gründungsmitglieder waren die Brüder Horáček: Miroslav, Jakub und Zdeněk, alle Absolventen der Kunstschule Adolf Voborský. Bis April 2013 war Miroslav Horáček Bandleader, danach übernahm sein jüngerer Bruder Jakub Horáček für neun Jahre. Seit Januar 2022 wird das Orchester von Petr Martišek und Štěpánka Tomášová geleitet. Viele Jahre war der Jazzclub U Staré paní in der Altstadt unsere Heimatbühne, von der wir uns im November 2016 verabschiedeten. Ein interessantes Ereignis im Jahr 2017 war ein Benefizkonzert auf der Střelecký-Insel, bei dem Matěj Ruppert mit uns sang. 2017 nahmen wir auch am Polenský Swing Festival teil."
+
+  eventPerformanceHeading: "Auftritte bei Ihrer Veranstaltung"
+  eventPerformanceParagraph1: "Gerne spielen wir auf Ihrem Ball, Ihrer Firmenveranstaltung, Hochzeit oder anderen Anlässen. Um eine Vorstellung davon zu bekommen, was wir für Sie spielen können, schauen Sie sich unser {{repertoireLink}} an. Gerne proben wir auch eine kleine Anzahl Ihrer Lieblingssongs auf Wunsch, aber Arrangements müssen rechtzeitig getroffen werden. Eine frühzeitige Buchung ist auch wichtig, um sicherzustellen, dass alle Musiker verfügbar sind und wir in Bestform auftreten können. Drei Monate im Voraus reichen normalerweise aus, ein Monat ist grenzwertig."
+  eventPerformanceParagraph2: "Unser großer Vorteil ist, dass wir eigene Ausrüstung und einen Tontechniker haben, nämlich Kuba Horáček, unseren ehemaligen Bandleader. Wir können aber natürlich auch mit Ihrem gewählten Tontechniker arbeiten."
+  eventPerformanceParagraph3: "Möchten Sie, dass eine Big Band bei Ihrer Veranstaltung spielt? {{contactLink}} Sie uns und wir besprechen die Details."
+  repertoireLink: "Repertoire"
+  contactLink: "Kontaktieren"
+
+# Members
+members:
+  heading: "Instrumentierung"
+  noMembers: "Keine Mitglieder registriert."
+  instruments: "Instrumente"
+  status: "Status"
+
+# Videos
+videos:
+  heading: "Videos"
+  noVideos: "Keine Videos verfügbar."
+
+# Contact
+contact:
+  heading: "Kontakt"
+  intro: "Interessiert an einem Auftritt unseres Orchesters bei Ihrer Veranstaltung? Zögern Sie nicht, uns zu kontaktieren!"
+  manager: "Managerin:"
+  email: "E-Mail:"
+  phone: "Telefon:"
+  socialPrompt: "Möchten Sie über bevorstehende Konzerte informiert bleiben? Folgen Sie uns in den sozialen Medien:"
+  noContactInfo: "Kontaktinformationen sind nicht verfügbar."
+
+# Concerts page
+concerts:
+  pageTitle: "Konzerte"
+  upcoming: "Kommende"
+  past: "Vergangene"
+  noPastConcerts: "Keine vergangenen Konzerte in der Datenbank."
+  date: "Datum:"
+  place: "Ort:"
+  fbEvent: "fb Veranstaltung"
+  tickets: "Tickets"
+  invitation: "Einladung"
+
+# Repertoire page
+repertoire:
+  pageTitle: "Repertoire"
+  intro: "Unser Repertoire zeichnet sich durch eine breite Genre-Vielfalt aus, von klassischen Swing-Hits über bekannte Filmmelodien bis hin zu Rock- und Rock'n'Roll-Klassikern. Es gibt auch Stücke, die sich für Tanz-Playlists für Bälle und ähnliche Veranstaltungen eignen."
+  songList: "Liedliste"
+  noSongs: "Das Repertoire ist derzeit leer."
+  viewConcerts: "Konzerte anzeigen"
+
+# Common
+common:
+  showAll: "Alle anzeigen"
+  more: "Mehr"
+  back: "Zurück"
+  loading: "Lädt..."
+  error: "Ein Fehler ist aufgetreten"
+
+# Footer
+footer:
+  copyright: "© {{year}} Horáček Swing Orchestra. Alle Rechte vorbehalten."
+  instagram: "Instagram"
+  facebook: "Facebook"
+  youtube: "YouTube"

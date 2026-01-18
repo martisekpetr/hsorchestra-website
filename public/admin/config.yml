@@ -36,31 +36,419 @@ site_url: https://hsorchestra.cz
 media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
-i18n:
-  structure: multiple_folders
-  locales: [en, de, fr]
-  default_locale: en
-
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    i18n: true
+  # Koncerty (Concerts)
+  - name: "koncerty"
+    label: "Koncerty"
     format: 'frontmatter'
-    folder: "content/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      # - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown", i18n: true }
-  - name: pages
-    label: Pages
+    folder: "content/koncerty"
+    create: true
+    identifier_field: "datetime"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["datetime"]
+    fields:
+      - { label: "Datum a čas", name: "datetime", widget: "datetime", format: "LLL" }
+      - { label: "Místo", name: "place", widget: "string" }
+      - { label: "Název", name: "title", widget: "string" }
+      - { label: "Popis", name: "description", widget: "markdown" }
+      - { label: "Facebook odkaz", name: "fb_link", widget: "string", required: false }
+      - { label: "Odkaz na vstupenky", name: "tickets_link", widget: "string", required: false }
+      - { label: "Pozvánka", name: "invitation", widget: "file", required: false }
+      - { label: "Obrázek", name: "image", widget: "image", required: false }
+
+  # Repertoár (Songs)
+  - name: "repertoar"
+    label: "Repertoár"
+    format: 'frontmatter'
+    folder: "content/repertoar"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["title"]
+    fields:
+      - { label: "Název", name: "title", widget: "string" }
+      - { label: "Autor", name: "author", widget: "string" }
+      - { label: "Zpěvák", name: "singer", widget: "string", required: false }
+      - { label: "Jazyk", name: "lang", widget: "select", options: ["czech", "foreign"] }
+
+  # Members
+  - name: "members"
+    label: "Členové orchestru"
+    format: 'frontmatter'
+    folder: "content/members"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["order", "name"]
+    fields:
+      - { label: "Jméno", name: "name", widget: "string" }
+      - label: "Nástroj"
+        name: "instrument"
+        widget: "select"
+        multiple: true
+        options: ["flétna", "klarinet", "alt saxofon", "tenor saxofon", "bariton saxofon", "trubka", "pozoun", "klavír", "bicí", "kytara", "baskytara", "zpěv", "kapelník"]
+      - { label: "Pořadí", name: "order", widget: "number", value_type: "int" }
+      - { label: "Status", name: "status", widget: "select", options: ["active", "inactive", "left"], default: "active" }
+
+  # Videos
+  - name: "videos"
+    label: "Videa"
+    format: 'frontmatter'
+    folder: "content/videos"
+    create: true
+    identifier_field: "videoId"
+    slug: "{{slug}}"
+    sortable_fields: ["order"]
+    fields:
+      - { label: "YouTube Video ID", name: "videoId", widget: "string" }
+      - { label: "Popis", name: "description", widget: "string" }
+      - { label: "Pořadí", name: "order", widget: "number", value_type: "int", required: false }
+
+  # Contact Information
+  - name: "contact"
+    label: "Kontaktní údaje"
     files:
-      - name: about
-        label: About Page
-        file: content/about.yml
+      - name: "contact"
+        label: "Kontakt"
+        file: "content/contact.yml"
         fields:
-          - { label: Title, name: title, widget: string }
+          - { label: "Jméno", name: "name", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Telefon", name: "phone", widget: "string" }
+
+  # i18n Translations - Czech
+  - name: "locale_cs"
+    label: "Překlady (Čeština)"
+    files:
+      - name: "common_cs"
+        label: "Obecné texty (CS)"
+        file: "content/locales/cs/common.yml"
+        fields:
+          - { label: "Název webu", name: "siteName", widget: "string" }
+          - { label: "Popis webu", name: "siteDescription", widget: "text" }
+          - label: "Navigace"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "Domů", name: "home", widget: "string" }
+              - { label: "O big bandu", name: "about", widget: "string" }
+              - { label: "Koncerty", name: "concerts", widget: "string" }
+              - { label: "Členové", name: "members", widget: "string" }
+              - { label: "Repertoár", name: "repertoire", widget: "string" }
+              - { label: "Videa", name: "videos", widget: "string" }
+              - { label: "Kontakt", name: "contact", widget: "string" }
+          - label: "Hero sekce"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Nadpis", name: "title", widget: "string" }
+              - { label: "Podnadpis", name: "subtitle", widget: "text" }
+          - label: "Nadcházející koncerty"
+            name: "upcomingConcerts"
+            widget: "object"
+            fields:
+              - { label: "Nadpis", name: "heading", widget: "string" }
+              - { label: "Tlačítko více", name: "moreButton", widget: "string" }
+              - { label: "Žádné koncerty", name: "noConcerts", widget: "string" }
+          - label: "O nás"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Nadpis", name: "heading", widget: "string" }
+              - { label: "Hlavní text", name: "mainText", widget: "text" }
+              - { label: "Historie - nadpis", name: "historyHeading", widget: "string" }
+              - { label: "Historie - text", name: "historyText", widget: "text" }
+              - { label: "Hraní na akci - nadpis", name: "eventPerformanceHeading", widget: "string" }
+              - { label: "Hraní na akci - odst. 1", name: "eventPerformanceParagraph1", widget: "text" }
+              - { label: "Hraní na akci - odst. 2", name: "eventPerformanceParagraph2", widget: "text" }
+              - { label: "Hraní na akci - odst. 3", name: "eventPerformanceParagraph3", widget: "text" }
+              - { label: "Link na repertoár", name: "repertoireLink", widget: "string" }
+              - { label: "Link kontaktujte", name: "contactLink", widget: "string" }
+          - label: "Členové"
+            name: "members"
+            widget: "object"
+            fields:
+              - { label: "Nadpis", name: "heading", widget: "string" }
+              - { label: "Žádní členové", name: "noMembers", widget: "string" }
+              - { label: "Nástroje", name: "instruments", widget: "string" }
+              - { label: "Status", name: "status", widget: "string" }
+          - label: "Videa"
+            name: "videos"
+            widget: "object"
+            fields:
+              - { label: "Nadpis", name: "heading", widget: "string" }
+              - { label: "Žádná videa", name: "noVideos", widget: "string" }
+          - label: "Kontakt"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Nadpis", name: "heading", widget: "string" }
+              - { label: "Úvodní text", name: "intro", widget: "text" }
+              - { label: "Manažerka", name: "manager", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Telefon", name: "phone", widget: "string" }
+              - { label: "Prompt sociální sítě", name: "socialPrompt", widget: "text" }
+              - { label: "Žádný kontakt", name: "noContactInfo", widget: "string" }
+          - label: "Stránka koncertů"
+            name: "concerts"
+            widget: "object"
+            fields:
+              - { label: "Nadpis stránky", name: "pageTitle", widget: "string" }
+              - { label: "Nadcházející", name: "upcoming", widget: "string" }
+              - { label: "Minulé", name: "past", widget: "string" }
+              - { label: "Žádné minulé", name: "noPastConcerts", widget: "string" }
+              - { label: "Datum", name: "date", widget: "string" }
+              - { label: "Místo", name: "place", widget: "string" }
+              - { label: "FB událost", name: "fbEvent", widget: "string" }
+              - { label: "Vstupenky", name: "tickets", widget: "string" }
+              - { label: "Pozvánka", name: "invitation", widget: "string" }
+          - label: "Stránka repertoáru"
+            name: "repertoire"
+            widget: "object"
+            fields:
+              - { label: "Nadpis stránky", name: "pageTitle", widget: "string" }
+              - { label: "Úvod", name: "intro", widget: "text" }
+              - { label: "Seznam písní", name: "songList", widget: "string" }
+              - { label: "Žádné písně", name: "noSongs", widget: "string" }
+              - { label: "Zobrazit koncerty", name: "viewConcerts", widget: "string" }
+          - label: "Společné"
+            name: "common"
+            widget: "object"
+            fields:
+              - { label: "Zobrazit vše", name: "showAll", widget: "string" }
+              - { label: "Více", name: "more", widget: "string" }
+              - { label: "Zpět", name: "back", widget: "string" }
+              - { label: "Načítání", name: "loading", widget: "string" }
+              - { label: "Chyba", name: "error", widget: "string" }
+          - label: "Patička"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - { label: "Instagram", name: "instagram", widget: "string" }
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "YouTube", name: "youtube", widget: "string" }
+
+  # i18n Translations - English
+  - name: "locale_en"
+    label: "Translations (English)"
+    files:
+      - name: "common_en"
+        label: "Common Texts (EN)"
+        file: "content/locales/en/common.yml"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Site Description", name: "siteDescription", widget: "text" }
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "Home", name: "home", widget: "string" }
+              - { label: "About", name: "about", widget: "string" }
+              - { label: "Concerts", name: "concerts", widget: "string" }
+              - { label: "Members", name: "members", widget: "string" }
+              - { label: "Repertoire", name: "repertoire", widget: "string" }
+              - { label: "Videos", name: "videos", widget: "string" }
+              - { label: "Contact", name: "contact", widget: "string" }
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - label: "Upcoming Concerts"
+            name: "upcomingConcerts"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "More Button", name: "moreButton", widget: "string" }
+              - { label: "No Concerts", name: "noConcerts", widget: "string" }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Main Text", name: "mainText", widget: "text" }
+              - { label: "History - Heading", name: "historyHeading", widget: "string" }
+              - { label: "History - Text", name: "historyText", widget: "text" }
+              - { label: "Event Performance - Heading", name: "eventPerformanceHeading", widget: "string" }
+              - { label: "Event Performance - Para. 1", name: "eventPerformanceParagraph1", widget: "text" }
+              - { label: "Event Performance - Para. 2", name: "eventPerformanceParagraph2", widget: "text" }
+              - { label: "Event Performance - Para. 3", name: "eventPerformanceParagraph3", widget: "text" }
+              - { label: "Repertoire Link", name: "repertoireLink", widget: "string" }
+              - { label: "Contact Link", name: "contactLink", widget: "string" }
+          - label: "Members"
+            name: "members"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "No Members", name: "noMembers", widget: "string" }
+              - { label: "Instruments", name: "instruments", widget: "string" }
+              - { label: "Status", name: "status", widget: "string" }
+          - label: "Videos"
+            name: "videos"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "No Videos", name: "noVideos", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Manager", name: "manager", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Social Prompt", name: "socialPrompt", widget: "text" }
+              - { label: "No Contact Info", name: "noContactInfo", widget: "string" }
+          - label: "Concerts Page"
+            name: "concerts"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "pageTitle", widget: "string" }
+              - { label: "Upcoming", name: "upcoming", widget: "string" }
+              - { label: "Past", name: "past", widget: "string" }
+              - { label: "No Past Concerts", name: "noPastConcerts", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Place", name: "place", widget: "string" }
+              - { label: "FB Event", name: "fbEvent", widget: "string" }
+              - { label: "Tickets", name: "tickets", widget: "string" }
+              - { label: "Invitation", name: "invitation", widget: "string" }
+          - label: "Repertoire Page"
+            name: "repertoire"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "pageTitle", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Song List", name: "songList", widget: "string" }
+              - { label: "No Songs", name: "noSongs", widget: "string" }
+              - { label: "View Concerts", name: "viewConcerts", widget: "string" }
+          - label: "Common"
+            name: "common"
+            widget: "object"
+            fields:
+              - { label: "Show All", name: "showAll", widget: "string" }
+              - { label: "More", name: "more", widget: "string" }
+              - { label: "Back", name: "back", widget: "string" }
+              - { label: "Loading", name: "loading", widget: "string" }
+              - { label: "Error", name: "error", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - { label: "Instagram", name: "instagram", widget: "string" }
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "YouTube", name: "youtube", widget: "string" }
+
+  # i18n Translations - German
+  - name: "locale_de"
+    label: "Übersetzungen (Deutsch)"
+    files:
+      - name: "common_de"
+        label: "Allgemeine Texte (DE)"
+        file: "content/locales/de/common.yml"
+        fields:
+          - { label: "Website-Name", name: "siteName", widget: "string" }
+          - { label: "Website-Beschreibung", name: "siteDescription", widget: "text" }
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "Startseite", name: "home", widget: "string" }
+              - { label: "Über uns", name: "about", widget: "string" }
+              - { label: "Konzerte", name: "concerts", widget: "string" }
+              - { label: "Mitglieder", name: "members", widget: "string" }
+              - { label: "Repertoire", name: "repertoire", widget: "string" }
+              - { label: "Videos", name: "videos", widget: "string" }
+              - { label: "Kontakt", name: "contact", widget: "string" }
+          - label: "Hero-Bereich"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Untertitel", name: "subtitle", widget: "text" }
+          - label: "Kommende Konzerte"
+            name: "upcomingConcerts"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "heading", widget: "string" }
+              - { label: "Mehr-Button", name: "moreButton", widget: "string" }
+              - { label: "Keine Konzerte", name: "noConcerts", widget: "string" }
+          - label: "Über uns"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "heading", widget: "string" }
+              - { label: "Haupttext", name: "mainText", widget: "text" }
+              - { label: "Geschichte - Überschrift", name: "historyHeading", widget: "string" }
+              - { label: "Geschichte - Text", name: "historyText", widget: "text" }
+              - { label: "Veranstaltung - Überschrift", name: "eventPerformanceHeading", widget: "string" }
+              - { label: "Veranstaltung - Abs. 1", name: "eventPerformanceParagraph1", widget: "text" }
+              - { label: "Veranstaltung - Abs. 2", name: "eventPerformanceParagraph2", widget: "text" }
+              - { label: "Veranstaltung - Abs. 3", name: "eventPerformanceParagraph3", widget: "text" }
+              - { label: "Repertoire-Link", name: "repertoireLink", widget: "string" }
+              - { label: "Kontakt-Link", name: "contactLink", widget: "string" }
+          - label: "Mitglieder"
+            name: "members"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "heading", widget: "string" }
+              - { label: "Keine Mitglieder", name: "noMembers", widget: "string" }
+              - { label: "Instrumente", name: "instruments", widget: "string" }
+              - { label: "Status", name: "status", widget: "string" }
+          - label: "Videos"
+            name: "videos"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "heading", widget: "string" }
+              - { label: "Keine Videos", name: "noVideos", widget: "string" }
+          - label: "Kontakt"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Manager", name: "manager", widget: "string" }
+              - { label: "E-Mail", name: "email", widget: "string" }
+              - { label: "Telefon", name: "phone", widget: "string" }
+              - { label: "Social Media-Aufforderung", name: "socialPrompt", widget: "text" }
+              - { label: "Keine Kontaktinfo", name: "noContactInfo", widget: "string" }
+          - label: "Konzerte-Seite"
+            name: "concerts"
+            widget: "object"
+            fields:
+              - { label: "Seitentitel", name: "pageTitle", widget: "string" }
+              - { label: "Kommende", name: "upcoming", widget: "string" }
+              - { label: "Vergangene", name: "past", widget: "string" }
+              - { label: "Keine vergangenen", name: "noPastConcerts", widget: "string" }
+              - { label: "Datum", name: "date", widget: "string" }
+              - { label: "Ort", name: "place", widget: "string" }
+              - { label: "FB-Veranstaltung", name: "fbEvent", widget: "string" }
+              - { label: "Tickets", name: "tickets", widget: "string" }
+              - { label: "Einladung", name: "invitation", widget: "string" }
+          - label: "Repertoire-Seite"
+            name: "repertoire"
+            widget: "object"
+            fields:
+              - { label: "Seitentitel", name: "pageTitle", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Liedliste", name: "songList", widget: "string" }
+              - { label: "Keine Lieder", name: "noSongs", widget: "string" }
+              - { label: "Konzerte anzeigen", name: "viewConcerts", widget: "string" }
+          - label: "Allgemein"
+            name: "common"
+            widget: "object"
+            fields:
+              - { label: "Alle anzeigen", name: "showAll", widget: "string" }
+              - { label: "Mehr", name: "more", widget: "string" }
+              - { label: "Zurück", name: "back", widget: "string" }
+              - { label: "Lädt", name: "loading", widget: "string" }
+              - { label: "Fehler", name: "error", widget: "string" }
+          - label: "Fußzeile"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - { label: "Instagram", name: "instagram", widget: "string" }
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "YouTube", name: "youtube", widget: "string" }

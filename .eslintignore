@@ -1,0 +1,16 @@
+# Build outputs
+.nuxt
+.output
+dist
+.vercel
+
+# Dependencies
+node_modules
+
+# Generated files
+*.log
+.DS_Store
+
+# Static files
+public
+.github
