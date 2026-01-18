@@ -5,6 +5,11 @@ const { data: texts } = await useTexts()
 const { data: koncerty } = await useAsyncData('koncerty', () => queryCollection('koncerty').all())
 const { data: videos } = await useAsyncData('videos', () => queryCollection('videos').all())
 
+// Load site images (hero, about, contact)
+const { data: siteImages } = await useAsyncData('siteImages', () =>
+  queryCollection('siteImages').first()
+)
+
 // Get upcoming concerts (limit to 3)
 const upcomingConcerts = computed(() => {
   if (!koncerty.value) return []
@@ -25,7 +30,7 @@ const sortedVideos = computed(() => {
 <template>
   <div v-if="texts">
     <!-- Hero Section -->
-    <header>
+    <header :style="siteImages?.hero ? { backgroundImage: `url(${siteImages.hero})` } : {}">
       <h1>{{ texts.hero.title }}</h1>
       <p>{{ texts.hero.subtitle }}</p>
     </header>
@@ -45,7 +50,7 @@ const sortedVideos = computed(() => {
     <!-- About Section -->
     <section id="o-big-bandu">
       <h2>{{ texts.about.heading }}</h2>
-
+      <img v-if="siteImages?.about" :src="siteImages.about" :alt="texts.about.heading" />
       <p>{{ texts.about.mainText }}</p>
 
       <!-- History Subsection -->
@@ -72,9 +77,16 @@ const sortedVideos = computed(() => {
       <p v-else>{{ texts.videos.noVideos }}</p>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="galerie">
+      <h2>Galerie</h2>
+      <GalleryGrid />
+    </section>
+
     <!-- Contact Section -->
     <section id="kontakt">
       <h2>{{ texts.contact.heading }}</h2>
+      <img v-if="siteImages?.contact" :src="siteImages.contact" :alt="texts.contact.heading" />
       <p>{{ texts.contact.intro }}</p>
       <ContactInfo />
       <p>{{ texts.contact.socialPrompt }}</p>

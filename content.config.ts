@@ -42,6 +42,22 @@ const contactSchema = z.object({
   phone: z.string(),
 })
 
+// Site Images schema (hero, about, contact section images)
+const siteImagesSchema = z.object({
+  hero: z.string().optional(),
+  about: z.string().optional(),
+  contact: z.string().optional(),
+})
+
+// Gallery schema
+const gallerySchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  image: z.string(),
+  order: z.number().default(0),
+  date: z.string().or(z.date()).optional(),
+})
+
 // Locale schema (translations)
 const localeSchema = z.object({
   siteName: z.string(),
@@ -163,6 +179,20 @@ export default defineContentConfig({
       type: 'data',
       source: 'contact.yml',
       schema: contactSchema,
+    }),
+
+    // Site Images (hero, about, contact section images)
+    siteImages: defineCollection({
+      type: 'data',
+      source: 'siteImages.yml',
+      schema: siteImagesSchema,
+    }),
+
+    // Gallery
+    gallery: defineCollection({
+      type: 'page',
+      source: 'gallery/**/*.md',
+      schema: gallerySchema,
     }),
 
     // Locales (translations)

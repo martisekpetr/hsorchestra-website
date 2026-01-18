@@ -1,0 +1,6 @@
+# Site section images (hero, about, contact)
+# These images are displayed in the respective sections of the homepage
+
+hero: "/images/title-photo.jpg"
+about: "/images/about.jpg"
+contact: "/images/contact.jpg"

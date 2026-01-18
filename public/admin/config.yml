@@ -33,7 +33,7 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 # Add site links in Decap CMS (optional)
 site_url: https://hsorchestra.cz
 
-media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "public/images/uploads" # Media files will be stored in the repo under public/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
@@ -452,3 +452,29 @@ collections:
               - { label: "Instagram", name: "instagram", widget: "string" }
               - { label: "Facebook", name: "facebook", widget: "string" }
               - { label: "YouTube", name: "youtube", widget: "string" }
+
+  # Site Images (hero, about, contact section images)
+  - name: siteImages
+    label: "Obrázky v textu"
+    files:
+      - label: "Obrázky v textu"
+        name: "siteImages"
+        file: "content/siteImages.yml"
+        fields:
+          - { label: "Hero obrázek", name: "hero", widget: "image", required: false }
+          - { label: "O nás obrázek", name: "about", widget: "image", required: false }
+          - { label: "Kontakt obrázek", name: "contact", widget: "image", required: false }
+
+  # Gallery
+  - name: gallery
+    label: "Galerie"
+    label_singular: "Fotografie"
+    folder: "content/gallery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Název", name: "title", widget: "string" }
+      - { label: "Popis", name: "description", widget: "text", required: false }
+      - { label: "Fotografie", name: "image", widget: "image" }
+      - { label: "Pořadí", name: "order", widget: "number", default: 0 }
+      - { label: "Datum", name: "date", widget: "datetime", required: false }
