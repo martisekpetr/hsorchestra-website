@@ -3,5 +3,5 @@ name: "Beáta Doleželová"
 instrument:
   - "trumpet"
 order: 4
-status: "active"
+status: "inactive"
 ---

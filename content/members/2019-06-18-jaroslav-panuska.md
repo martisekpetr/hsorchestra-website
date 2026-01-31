@@ -1,8 +1,7 @@
 ---
-name: "Jára Panuška"
+name: Jára Panuška
 instrument:
-  - "vocals"
-  - "trombone"
+  - vocals
 order: 3
-status: "active"
+status: active
 ---

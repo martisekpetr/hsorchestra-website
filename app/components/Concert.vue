@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { locale } = useI18n()
+const { data: texts } = await useTexts()
 
 defineProps<{
   concert: {
@@ -10,6 +11,7 @@ defineProps<{
     fb_link?: string
     tickets_link?: string
     invitation?: string
+    image?: string
   }
 }>()
 
@@ -26,7 +28,7 @@ const formatDate = (dateString: string) => {
 </script>
 
 <template>
-  <div class="concert">
+  <div class="concert" :class="{ 'no-image': !concert.image }">
     <h3>
       {{ concert.title }}
     </h3>
@@ -60,24 +62,24 @@ const formatDate = (dateString: string) => {
         <span class="icon-wrapper">
           <font-awesome :icon="['fab', 'facebook']" :style="{ color: '#222' }" />
         </span>
-        <a :href="concert.fb_link">fb událost</a>
+        <a :href="concert.fb_link">{{ texts?.concerts.fbEvent }}</a>
       </span>
       <span v-if="concert.tickets_link">
         <span class="icon-wrapper">
           <font-awesome icon="ticket-alt" :style="{ color: '#222' }" />
         </span>
-        <a :href="concert.tickets_link">vstupenky</a>
+        <a :href="concert.tickets_link">{{ texts?.concerts.tickets }}</a>
       </span>
 
       <span v-if="concert.invitation">
         <span class="icon-wrapper">
           <font-awesome icon="paperclip" :style="{ color: '#222' }" />
         </span>
-        <a :href="concert.invitation">pozvánka</a>
+        <a :href="concert.invitation">{{ texts?.concerts.invitation }}</a>
       </span>
     </div>
 
-    <img src="/images/contact.jpg" />
+    <img v-if="concert.image" :src="concert.image" :alt="concert.title" />
   </div>
 </template>
 
@@ -93,6 +95,11 @@ const formatDate = (dateString: string) => {
   grid-template-areas: 'title img' 'info img' 'description img' 'footer img';
   column-gap: 3%;
   font-size: 1rem;
+}
+
+.concert.no-image {
+  grid-template-columns: 1fr;
+  grid-template-areas: 'title' 'info' 'description' 'footer';
 }
 
 img {

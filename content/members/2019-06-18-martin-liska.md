@@ -2,5 +2,5 @@
 name: "Martin Liška"
 instrument:
   - "drums"
-status: "active"
+status: "inactive"
 ---

@@ -1,7 +1,7 @@
 ---
-name: "Jan Zelený"
+name: Jan Goldmund
 instrument:
-  - "trombone"
+  - trombone
 order: 4
-status: "active"
+status: active
 ---

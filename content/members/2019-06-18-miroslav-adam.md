@@ -1,7 +1,7 @@
 ---
-name: "Miroslav Adam"
+name: Miroslav Adam
 instrument:
-  - "tenorSax"
+  - baritoneSax
 order: 2
-status: "active"
+status: active
 ---

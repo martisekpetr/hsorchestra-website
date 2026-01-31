@@ -1,5 +1,5 @@
 ---
-name: "Štěpánka Tomášová"
+name: "Štěpánka Martišková"
 instrument:
   - "vocals"
   - "conductor"

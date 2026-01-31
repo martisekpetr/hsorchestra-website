@@ -11,7 +11,6 @@ const upcomingConcerts = computed(() => {
   return koncerty.value
     .filter((concert: any) => new Date(concert.datetime) >= now)
     .sort((a: any, b: any) => new Date(a.datetime).getTime() - new Date(b.datetime).getTime())
-    .slice(0, 3)
 })
 </script>
 

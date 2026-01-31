@@ -1,5 +1,5 @@
 ---
-datetime: "January 25, 2022 6:30 PM"
+datetime: "2022-01-25 18:30"
 place: "Vinohradský pivovar"
 title: "Rock vs. Swing"
 ---

@@ -1,7 +1,7 @@
 ---
-name: "Jan Bohadlo"
+name: Jan Bohadlo
 instrument:
-  - "trumpet"
+  - trumpet
 order: 3
-status: "active"
+status: inactive
 ---

@@ -44,10 +44,10 @@ collections:
     folder: "content/koncerty"
     create: true
     identifier_field: "datetime"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}-{{title}}"
     sortable_fields: ["datetime"]
     fields:
-      - { label: "Datum a čas", name: "datetime", widget: "datetime", format: "LLL" }
+      - { label: "Datum a čas", name: "datetime", widget: "datetime", format: "YYYY-MM-DD HH:mm" }
       - { label: "Místo", name: "place", widget: "string" }
       - { label: "Název", name: "title", widget: "string" }
       - { label: "Popis", name: "description", widget: "markdown" }
@@ -101,6 +101,33 @@ collections:
       - { label: "YouTube Video ID", name: "videoId", widget: "string" }
       - { label: "Popis", name: "description", widget: "string" }
       - { label: "Pořadí", name: "order", widget: "number", value_type: "int", required: false }
+  
+  # Site Images (logo, hero, about, contact section images)
+  - name: siteImages
+    label: "Obrázky v textu"
+    files:
+      - label: "Obrázky v textu"
+        name: "siteImages"
+        file: "content/siteImages.yml"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image", required: false }
+          - { label: "Hero obrázek", name: "hero", widget: "image", required: false }
+          - { label: "O nás obrázek", name: "about", widget: "image", required: false }
+          - { label: "Kontakt obrázek", name: "contact", widget: "image", required: false }
+
+  # Gallery
+  - name: gallery
+    label: "Galerie"
+    label_singular: "Fotografie"
+    folder: "content/gallery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Název (alt text)", name: "title", widget: "string" }
+      - { label: "Fotografie", name: "image", widget: "image" }
+      - { label: "Thumbnail (volitelné)", name: "thumbnail", widget: "image", required: false }
+      - { label: "Pořadí", name: "order", widget: "number", default: 0 }
+
 
   # Contact Information
   - name: "contact"
@@ -503,29 +530,3 @@ collections:
               - { label: "Instagram", name: "instagram", widget: "string" }
               - { label: "Facebook", name: "facebook", widget: "string" }
               - { label: "YouTube", name: "youtube", widget: "string" }
-
-  # Site Images (logo, hero, about, contact section images)
-  - name: siteImages
-    label: "Obrázky v textu"
-    files:
-      - label: "Obrázky v textu"
-        name: "siteImages"
-        file: "content/siteImages.yml"
-        fields:
-          - { label: "Logo", name: "logo", widget: "image", required: false }
-          - { label: "Hero obrázek", name: "hero", widget: "image", required: false }
-          - { label: "O nás obrázek", name: "about", widget: "image", required: false }
-          - { label: "Kontakt obrázek", name: "contact", widget: "image", required: false }
-
-  # Gallery
-  - name: gallery
-    label: "Galerie"
-    label_singular: "Fotografie"
-    folder: "content/gallery"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Název (alt text)", name: "title", widget: "string" }
-      - { label: "Fotografie", name: "image", widget: "image" }
-      - { label: "Thumbnail (volitelné)", name: "thumbnail", widget: "image", required: false }
-      - { label: "Pořadí", name: "order", widget: "number", default: 0 }

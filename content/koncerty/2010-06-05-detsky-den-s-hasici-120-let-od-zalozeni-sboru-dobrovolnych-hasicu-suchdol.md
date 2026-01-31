@@ -1,0 +1,5 @@
+---
+datetime: "2010-06-05 19:00"
+place: "Suchdolské náměstí"
+title: "Dětský den s hasiči (120 let od založení Sboru dobrovolných hasičů Suchdol)"
+---

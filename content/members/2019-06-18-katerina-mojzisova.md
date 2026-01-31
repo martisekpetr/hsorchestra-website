@@ -1,5 +1,5 @@
 ---
-name: "Kateřina Mojžišová"
+name: "Kateřina Hellerová"
 instrument:
   - "flute"
 status: "active"

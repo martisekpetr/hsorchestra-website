@@ -1,6 +1,7 @@
 ---
-name: "Petr Bechyňák"
+name: Petr Bechyňák
 instrument:
-  - "baritoneSax"
-status: "active"
+  - tenorSax
+order: 2
+status: active
 ---
