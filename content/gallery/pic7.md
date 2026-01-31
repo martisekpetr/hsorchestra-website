@@ -1,6 +1,6 @@
 ---
 title: 'Foto 7'
-image: '/images/frontpage/pic7.jpg'
-thumbnail: '/images/frontpage/pic7_thumb.jpg'
+image: 'images/frontpage/pic7.jpg'
+thumbnail: 'images/frontpage/pic7_thumb.jpg'
 order: 7
 ---

@@ -1,10 +1,10 @@
 ---
-datetime: "2024-06-17 19:00"
-place: "Gauč na Výstavišti"
-title: "Večer jazzu a swingu s Two Towers a Horáček swing Orchestra"
-fb_link: "https://www.facebook.com/share/PAbqnKfF6Uh4MBTT/"
-tickets_link: "https://goout.net/cs/vecer-jazzu-a-swingu-two-towers%2Bhoracek-swing-orchestra/szrkbfx/"
-image: "/images/uploads/438082722_494464856252960_5054402771554092768_n.jpg"
+datetime: '2024-06-17 19:00'
+place: 'Gauč na Výstavišti'
+title: 'Večer jazzu a swingu s Two Towers a Horáček swing Orchestra'
+fb_link: 'https://www.facebook.com/share/PAbqnKfF6Uh4MBTT/'
+tickets_link: 'https://goout.net/cs/vecer-jazzu-a-swingu-two-towers%2Bhoracek-swing-orchestra/szrkbfx/'
+image: 'images/uploads/438082722_494464856252960_5054402771554092768_n.jpg'
 ---
 
 Dvě kapely, které spojuje láska k jazzu a swingu zahrají dohromady koncert na Pražském výstavišti.
