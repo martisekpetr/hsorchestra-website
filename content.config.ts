@@ -42,8 +42,9 @@ const contactSchema = z.object({
   phone: z.string(),
 })
 
-// Site Images schema (hero, about, contact section images)
+// Site Images schema (hero, about, contact section images, logo)
 const siteImagesSchema = z.object({
+  logo: z.string().optional(),
   hero: z.string().optional(),
   about: z.string().optional(),
   contact: z.string().optional(),
@@ -52,10 +53,9 @@ const siteImagesSchema = z.object({
 // Gallery schema
 const gallerySchema = z.object({
   title: z.string(),
-  description: z.string().optional(),
   image: z.string(),
+  thumbnail: z.string().optional(),
   order: z.number().default(0),
-  date: z.string().or(z.date()).optional(),
 })
 
 // Locale schema (translations)
@@ -97,6 +97,21 @@ const localeSchema = z.object({
     noMembers: z.string(),
     instruments: z.string(),
     status: z.string(),
+    instrumentNames: z.object({
+      trumpet: z.string(),
+      trombone: z.string(),
+      flute: z.string(),
+      clarinet: z.string(),
+      altoSax: z.string(),
+      tenorSax: z.string(),
+      baritoneSax: z.string(),
+      guitar: z.string(),
+      piano: z.string(),
+      bass: z.string(),
+      drums: z.string(),
+      vocals: z.string(),
+      conductor: z.string(),
+    }),
   }),
   videos: z.object({
     heading: z.string(),

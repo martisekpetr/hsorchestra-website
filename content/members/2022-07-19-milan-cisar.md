@@ -2,6 +2,6 @@
 status: "active"
 name: "Milan Císař"
 instrument:
-  - "kytara"
+  - "guitar"
 order: 1
 ---

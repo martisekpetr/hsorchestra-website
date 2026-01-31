@@ -1,6 +1,6 @@
 ---
 name: "Martin Liška"
 instrument:
-  - "bicí"
+  - "drums"
 status: "active"
 ---

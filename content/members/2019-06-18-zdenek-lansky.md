@@ -1,7 +1,7 @@
 ---
 name: "Zdeněk Lánský"
 instrument:
-  - "tenor saxofon"
+  - "tenorSax"
 order: 1
 status: "active"
 ---

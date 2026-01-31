@@ -1,8 +1,8 @@
 ---
 name: "Štěpánka Tomášová"
 instrument:
-  - "zpěv"
-  - "kapelník"
+  - "vocals"
+  - "conductor"
 order: 2
 status: "active"
 ---

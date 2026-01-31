@@ -1,8 +1,8 @@
 ---
 name: "Jára Panuška"
 instrument:
-  - "zpěv"
-  - "pozoun"
+  - "vocals"
+  - "trombone"
 order: 3
 status: "active"
 ---

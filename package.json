@@ -13,12 +13,18 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-brands-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@nuxt/content": "^3.10.0",
     "@nuxt/eslint": "^1.12.1",
     "@nuxtjs/i18n": "^10.2.1",
+    "@vesp/nuxt-fontawesome": "^2.0.0",
     "better-sqlite3": "^12.6.2",
+    "embla-carousel-vue": "^8.6.0",
     "eslint": "^9.39.2",
-    "nuxt": "^4.2.2"
+    "nuxt": "^4.2.2",
+    "vue-easy-lightbox": "^1.19.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^10.1.8",

@@ -1,7 +1,7 @@
 ---
 name: "Josef Zeman"
 instrument:
-  - "trubka"
+  - "trumpet"
 order: 5
 status: "active"
 ---

@@ -1,7 +1,7 @@
 ---
 name: "Jan Bohadlo"
 instrument:
-  - "trubka"
+  - "trumpet"
 order: 3
 status: "active"
 ---

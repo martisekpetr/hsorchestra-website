@@ -1,7 +1,7 @@
 ---
 name: "Jan Košina"
 instrument:
-  - "alt saxofon"
+  - "altoSax"
 order: 1
 status: "active"
 ---

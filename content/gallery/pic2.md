@@ -1,6 +1,6 @@
 ---
-title: "Big band"
-description: "Orchestr při vystoupení"
+title: "Koncert"
 image: "/images/frontpage/pic2.jpg"
+thumbnail: "/images/frontpage/pic2_thumb.jpg"
 order: 2
 ---

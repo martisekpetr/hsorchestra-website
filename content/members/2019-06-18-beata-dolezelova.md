@@ -1,7 +1,7 @@
 ---
 name: "Beáta Doleželová"
 instrument:
-  - "trubka"
+  - "trumpet"
 order: 4
 status: "active"
 ---

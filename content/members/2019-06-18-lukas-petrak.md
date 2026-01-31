@@ -1,6 +1,6 @@
 ---
 name: "Lukáš Petrák"
 instrument:
-  - "klavír"
+  - "piano"
 status: "active"
 ---

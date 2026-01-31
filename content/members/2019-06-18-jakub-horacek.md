@@ -1,6 +1,6 @@
 ---
 name: "Jakub Horáček"
 instrument:
-  - "kapelník"
+  - "conductor"
 status: "inactive"
 ---

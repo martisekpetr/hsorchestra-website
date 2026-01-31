@@ -1,7 +1,7 @@
 ---
 name: "Pavel Novák"
 instrument:
-  - "trubka"
+  - "trumpet"
 order: 1
 status: "active"
 ---

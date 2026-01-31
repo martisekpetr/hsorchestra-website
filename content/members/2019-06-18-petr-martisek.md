@@ -1,8 +1,8 @@
 ---
 name: "Petr Martišek"
 instrument:
-  - "baskytara"
-  - "kapelník"
+  - "bass"
+  - "conductor"
 order: 1
 status: "active"
 ---

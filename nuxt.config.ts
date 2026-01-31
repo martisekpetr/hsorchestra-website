@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     baseURL: '/hsorchestra-website/', // Your repo name
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/eslint'],
+  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/eslint', '@vesp/nuxt-fontawesome'],
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
 
@@ -15,9 +15,9 @@ export default defineNuxtConfig({
   // Translations are loaded via Nuxt Content (CMS-editable) using useTexts() composable
   i18n: {
     locales: [
-      { code: 'cs', language: 'cs-CZ', name: 'Čeština' },
-      { code: 'en', language: 'en-US', name: 'English' },
-      { code: 'de', language: 'de-DE', name: 'Deutsch' },
+      { code: 'cs', language: 'cs-CZ', name: 'Čeština', switcherLabel: 'CZ' },
+      { code: 'en', language: 'en-US', name: 'English', switcherLabel: 'EN' },
+      { code: 'de', language: 'de-DE', name: 'Deutsch', switcherLabel: 'DE' },
     ],
     defaultLocale: 'cs',
     strategy: 'prefix_except_default', // URLs: /en/page, /de/page, /page (for default cs)
@@ -29,7 +29,13 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/']
-    }
-  }
+      routes: ['/'],
+    },
+  },
+  fontawesome: {
+    icons: {
+      solid: ['calendar', 'paperclip', 'ticket-alt', 'map-marker-alt'],
+      brands: ['facebook'],
+    },
+  },
 })

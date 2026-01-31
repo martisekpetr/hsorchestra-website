@@ -1,7 +1,7 @@
 ---
 name: "Jan Zelený"
 instrument:
-  - "pozoun"
+  - "trombone"
 order: 4
 status: "active"
 ---

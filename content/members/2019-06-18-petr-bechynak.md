@@ -1,6 +1,6 @@
 ---
 name: "Petr Bechyňák"
 instrument:
-  - "bariton saxofon"
+  - "baritoneSax"
 status: "active"
 ---

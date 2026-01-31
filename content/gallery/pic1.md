@@ -1,6 +1,5 @@
 ---
-title: "Koncert"
-description: "Vystoupení big bandu"
-image: "/images/frontpage/pic1.jpg"
+title: 'Foto 1'
+image: '/images/frontpage/pic1.jpg'
 order: 1
 ---

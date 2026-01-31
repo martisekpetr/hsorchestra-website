@@ -1,7 +1,7 @@
 ---
 name: "Markéta Pelzová"
 instrument:
-  - "alt saxofon"
+  - "altoSax"
 order: 2
 status: "active"
 ---

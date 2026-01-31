@@ -1,6 +1,7 @@
-# Site section images (hero, about, contact)
+# Site section images (logo, hero, about, contact)
 # These images are displayed in the respective sections of the homepage
 
+logo: "/images/logo150.png"
 hero: "/images/title-photo.jpg"
 about: "/images/about.jpg"
 contact: "/images/contact.jpg"

@@ -1,7 +1,7 @@
 ---
 name: "Radek Surynek"
 instrument:
-  - "pozoun"
+  - "trombone"
 order: 1
 status: "active"
 ---

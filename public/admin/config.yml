@@ -84,7 +84,7 @@ collections:
         name: "instrument"
         widget: "select"
         multiple: true
-        options: ["flétna", "klarinet", "alt saxofon", "tenor saxofon", "bariton saxofon", "trubka", "pozoun", "klavír", "bicí", "kytara", "baskytara", "zpěv", "kapelník"]
+        options: ["flute", "clarinet", "altoSax", "tenorSax", "baritoneSax", "trumpet", "trombone", "piano", "drums", "guitar", "bass", "vocals", "conductor"]
       - { label: "Pořadí", name: "order", widget: "number", value_type: "int" }
       - { label: "Status", name: "status", widget: "select", options: ["active", "inactive", "left"], default: "active" }
 
@@ -170,6 +170,23 @@ collections:
               - { label: "Žádní členové", name: "noMembers", widget: "string" }
               - { label: "Nástroje", name: "instruments", widget: "string" }
               - { label: "Status", name: "status", widget: "string" }
+              - label: "Názvy nástrojů"
+                name: "instrumentNames"
+                widget: "object"
+                fields:
+                  - { label: "Trubka", name: "trumpet", widget: "string" }
+                  - { label: "Pozoun", name: "trombone", widget: "string" }
+                  - { label: "Flétna", name: "flute", widget: "string" }
+                  - { label: "Klarinet", name: "clarinet", widget: "string" }
+                  - { label: "Alt saxofon", name: "altoSax", widget: "string" }
+                  - { label: "Tenor saxofon", name: "tenorSax", widget: "string" }
+                  - { label: "Bariton saxofon", name: "baritoneSax", widget: "string" }
+                  - { label: "Kytara", name: "guitar", widget: "string" }
+                  - { label: "Klavír", name: "piano", widget: "string" }
+                  - { label: "Baskytara", name: "bass", widget: "string" }
+                  - { label: "Bicí", name: "drums", widget: "string" }
+                  - { label: "Zpěv", name: "vocals", widget: "string" }
+                  - { label: "Kapelník", name: "conductor", widget: "string" }
           - label: "Videa"
             name: "videos"
             widget: "object"
@@ -283,6 +300,23 @@ collections:
               - { label: "No Members", name: "noMembers", widget: "string" }
               - { label: "Instruments", name: "instruments", widget: "string" }
               - { label: "Status", name: "status", widget: "string" }
+              - label: "Instrument Names"
+                name: "instrumentNames"
+                widget: "object"
+                fields:
+                  - { label: "Trumpet", name: "trumpet", widget: "string" }
+                  - { label: "Trombone", name: "trombone", widget: "string" }
+                  - { label: "Flute", name: "flute", widget: "string" }
+                  - { label: "Clarinet", name: "clarinet", widget: "string" }
+                  - { label: "Alto Saxophone", name: "altoSax", widget: "string" }
+                  - { label: "Tenor Saxophone", name: "tenorSax", widget: "string" }
+                  - { label: "Baritone Saxophone", name: "baritoneSax", widget: "string" }
+                  - { label: "Guitar", name: "guitar", widget: "string" }
+                  - { label: "Piano", name: "piano", widget: "string" }
+                  - { label: "Bass", name: "bass", widget: "string" }
+                  - { label: "Drums", name: "drums", widget: "string" }
+                  - { label: "Vocals", name: "vocals", widget: "string" }
+                  - { label: "Conductor", name: "conductor", widget: "string" }
           - label: "Videos"
             name: "videos"
             widget: "object"
@@ -396,6 +430,23 @@ collections:
               - { label: "Keine Mitglieder", name: "noMembers", widget: "string" }
               - { label: "Instrumente", name: "instruments", widget: "string" }
               - { label: "Status", name: "status", widget: "string" }
+              - label: "Instrumentennamen"
+                name: "instrumentNames"
+                widget: "object"
+                fields:
+                  - { label: "Trompete", name: "trumpet", widget: "string" }
+                  - { label: "Posaune", name: "trombone", widget: "string" }
+                  - { label: "Flöte", name: "flute", widget: "string" }
+                  - { label: "Klarinette", name: "clarinet", widget: "string" }
+                  - { label: "Altsaxophon", name: "altoSax", widget: "string" }
+                  - { label: "Tenorsaxophon", name: "tenorSax", widget: "string" }
+                  - { label: "Baritonsaxophon", name: "baritoneSax", widget: "string" }
+                  - { label: "Gitarre", name: "guitar", widget: "string" }
+                  - { label: "Klavier", name: "piano", widget: "string" }
+                  - { label: "Bass", name: "bass", widget: "string" }
+                  - { label: "Schlagzeug", name: "drums", widget: "string" }
+                  - { label: "Gesang", name: "vocals", widget: "string" }
+                  - { label: "Dirigent", name: "conductor", widget: "string" }
           - label: "Videos"
             name: "videos"
             widget: "object"
@@ -453,7 +504,7 @@ collections:
               - { label: "Facebook", name: "facebook", widget: "string" }
               - { label: "YouTube", name: "youtube", widget: "string" }
 
-  # Site Images (hero, about, contact section images)
+  # Site Images (logo, hero, about, contact section images)
   - name: siteImages
     label: "Obrázky v textu"
     files:
@@ -461,6 +512,7 @@ collections:
         name: "siteImages"
         file: "content/siteImages.yml"
         fields:
+          - { label: "Logo", name: "logo", widget: "image", required: false }
           - { label: "Hero obrázek", name: "hero", widget: "image", required: false }
           - { label: "O nás obrázek", name: "about", widget: "image", required: false }
           - { label: "Kontakt obrázek", name: "contact", widget: "image", required: false }
@@ -473,8 +525,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Název", name: "title", widget: "string" }
-      - { label: "Popis", name: "description", widget: "text", required: false }
+      - { label: "Název (alt text)", name: "title", widget: "string" }
       - { label: "Fotografie", name: "image", widget: "image" }
+      - { label: "Thumbnail (volitelné)", name: "thumbnail", widget: "image", required: false }
       - { label: "Pořadí", name: "order", widget: "number", default: 0 }
-      - { label: "Datum", name: "date", widget: "datetime", required: false }

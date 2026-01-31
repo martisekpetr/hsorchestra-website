@@ -1,6 +1,6 @@
 ---
-title: "Saxofonová sekce"
-description: "Saxofonisté orchestru"
+title: "Koncert"
 image: "/images/frontpage/pic4.jpg"
+thumbnail: "/images/frontpage/pic4_thumb.jpg"
 order: 4
 ---

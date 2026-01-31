@@ -1,7 +1,7 @@
 ---
 name: "Vašek Santolík"
 instrument:
-  - "pozoun"
+  - "trombone"
 order: 2
 status: "active"
 ---

@@ -1,6 +1,6 @@
 ---
 name: "Kateřina Mojžišová"
 instrument:
-  - "flétna"
+  - "flute"
 status: "active"
 ---
