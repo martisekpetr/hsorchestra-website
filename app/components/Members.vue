@@ -30,68 +30,68 @@ const instruments: Array<{ name: InstrumentName; style: Record<string, string>; 
   {
     name: 'trumpet',
     style: { left: '7%', top: '67%', width: '8%' },
-    icon: 'images/instruments/trumpet.svg',
+    icon: '/images/instruments/trumpet.svg',
   },
   {
     name: 'trombone',
     style: { left: '24%', top: '71%', width: '12%' },
-    icon: 'images/instruments/trombone.svg',
+    icon: '/images/instruments/trombone.svg',
   },
   {
     name: 'flute',
     style: { left: '50%', top: '48%', width: '12%' },
-    icon: 'images/instruments/flute.svg',
+    icon: '/images/instruments/flute.svg',
   },
   {
     name: 'clarinet',
     style: { left: '36%', top: '57%', width: '9%' },
-    icon: 'images/instruments/clarinet.svg',
+    icon: '/images/instruments/clarinet.svg',
   },
   {
     name: 'altoSax',
     style: { left: '65%', top: '58%', width: '8%' },
-    icon: 'images/instruments/alt_sax.svg',
+    icon: '/images/instruments/alt_sax.svg',
   },
   {
     name: 'tenorSax',
     style: { left: '80%', top: '68%', width: '8%' },
-    icon: 'images/instruments/tenor_sax.svg',
+    icon: '/images/instruments/tenor_sax.svg',
   },
   {
     name: 'baritoneSax',
     style: { left: '93%', top: '58%', width: '8%' },
-    icon: 'images/instruments/bariton_sax.svg',
+    icon: '/images/instruments/bariton_sax.svg',
   },
   {
     name: 'guitar',
     style: { left: '68%', top: '20%', width: '10%' },
-    icon: 'images/instruments/guitar.svg',
+    icon: '/images/instruments/guitar.svg',
   },
 
   {
     name: 'piano',
     style: { left: '87%', top: '16%', width: '19%' },
-    icon: 'images/instruments/piano.svg',
+    icon: '/images/instruments/piano.svg',
   },
   {
     name: 'bass',
     style: { left: '34%', top: '20%', width: '10%' },
-    icon: 'images/instruments/bass.svg',
+    icon: '/images/instruments/bass.svg',
   },
   {
     name: 'drums',
     style: { left: '50%', top: '12%', width: '17%' },
-    icon: 'images/instruments/drums.svg',
+    icon: '/images/instruments/drums.svg',
   },
   {
     name: 'vocals',
     style: { left: '15%', top: '18%', width: '13%' },
-    icon: 'images/instruments/singers.svg',
+    icon: '/images/instruments/singers.svg',
   },
   {
     name: 'conductor',
     style: { left: '50%', top: '85%', width: '10%' },
-    icon: 'images/instruments/conductor.svg',
+    icon: '/images/instruments/conductor.svg',
   },
 ]
 
