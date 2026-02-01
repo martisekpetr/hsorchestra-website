@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="localePath(href)" :target="props.target">
+  <NuxtLink :to="$localePath(href)" :target="props.target">
     <slot />
   </NuxtLink>
 </template>
@@ -7,8 +7,6 @@
 <script setup lang="ts">
 // replace all <a> links inside MDC components with the localized version
 import type { PropType } from 'vue'
-
-const localePath = useLocalePath()
 
 const props = defineProps({
   href: {

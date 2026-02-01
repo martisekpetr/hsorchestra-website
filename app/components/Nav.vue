@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // Load translations
 const { data: texts } = useTexts()
-const localePath = useLocalePath()
 
 // Load logo from CMS
 const { data: siteImages } = await useAsyncData('siteImages', () =>
@@ -60,19 +59,19 @@ onUnmounted(() => {
     <!-- Desktop Menu -->
     <ul class="nav-menu desktop-menu">
       <li>
-        <NuxtLink :to="localePath('/#o-big-bandu')">{{ texts.nav.about }}</NuxtLink>
+        <NuxtLink :to="$localePath('/#o-big-bandu')">{{ texts.nav.about }}</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/koncerty')">{{ texts.nav.concerts }}</NuxtLink>
+        <NuxtLink :to="$localePath('/koncerty')">{{ texts.nav.concerts }}</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/#obsazeni')">{{ texts.nav.members }}</NuxtLink>
+        <NuxtLink :to="$localePath('/#obsazeni')">{{ texts.nav.members }}</NuxtLink>
       </li>
 
       <!-- Logo -->
       <NuxtLink
         v-if="siteImages?.logo"
-        :to="localePath('/')"
+        :to="$localePath('/')"
         class="logo-link desktop-logo"
         @click="closeMobileMenu"
       >
@@ -80,13 +79,13 @@ onUnmounted(() => {
       </NuxtLink>
 
       <li>
-        <NuxtLink :to="localePath('/repertoar')">{{ texts.nav.repertoire }}</NuxtLink>
+        <NuxtLink :to="$localePath('/repertoar')">{{ texts.nav.repertoire }}</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/#videa')">{{ texts.nav.videos }}</NuxtLink>
+        <NuxtLink :to="$localePath('/#videa')">{{ texts.nav.videos }}</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/#kontakt')">{{ texts.nav.contact }}</NuxtLink>
+        <NuxtLink :to="$localePath('/#kontakt')">{{ texts.nav.contact }}</NuxtLink>
       </li>
     </ul>
 
@@ -94,7 +93,7 @@ onUnmounted(() => {
       <!-- Mobile Logo (centered) -->
       <NuxtLink
         v-if="siteImages?.logo"
-        :to="localePath('/')"
+        :to="$localePath('/')"
         class="logo-link mobile-logo"
         @click="closeMobileMenu"
       >
@@ -118,35 +117,35 @@ onUnmounted(() => {
     <!-- Mobile Menu Drawer -->
     <ul ref="mobileMenuRef" class="nav-menu mobile-menu" :class="{ open: mobileMenuOpen }">
       <li>
-        <NuxtLink :to="localePath('/')" @click="closeMobileMenu">{{ texts.nav.home }}</NuxtLink>
+        <NuxtLink :to="$localePath('/')" @click="closeMobileMenu">{{ texts.nav.home }}</NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/#o-big-bandu')" @click="closeMobileMenu">
+        <NuxtLink :to="$localePath('/#o-big-bandu')" @click="closeMobileMenu">
           {{ texts.nav.about }}
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/koncerty')" @click="closeMobileMenu">
+        <NuxtLink :to="$localePath('/koncerty')" @click="closeMobileMenu">
           {{ texts.nav.concerts }}
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/#obsazeni')" @click="closeMobileMenu">
+        <NuxtLink :to="$localePath('/#obsazeni')" @click="closeMobileMenu">
           {{ texts.nav.members }}
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/repertoar')" @click="closeMobileMenu">
+        <NuxtLink :to="$localePath('/repertoar')" @click="closeMobileMenu">
           {{ texts.nav.repertoire }}
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/#videa')" @click="closeMobileMenu">
+        <NuxtLink :to="$localePath('/#videa')" @click="closeMobileMenu">
           {{ texts.nav.videos }}
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath('/#kontakt')" @click="closeMobileMenu">
+        <NuxtLink :to="$localePath('/#kontakt')" @click="closeMobileMenu">
           {{ texts.nav.contact }}
         </NuxtLink>
       </li>
