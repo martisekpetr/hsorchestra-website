@@ -8,5 +8,6 @@ description: >-
 
   Přijďte okusit atmosféru klasických swingových večerů v současném pojetí.
 fb_link: https://fb.me/e/5LJdkQ4W6
+invitation: /images/uploads/posters_eng_cz_horacek-1_page-0001.jpg
 image: /images/uploads/hso_kobylisy.jpg
 ---
