@@ -8,5 +8,5 @@ description: >-
 
   Přijďte okusit atmosféru klasických swingových večerů v současném pojetí.
 fb_link: https://fb.me/e/5LJdkQ4W6
-image: /images/uploads/hso_small-7.jpg
+image: /images/uploads/hso_kobylisy.jpg
 ---
