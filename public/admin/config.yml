@@ -54,7 +54,7 @@ collections:
       - { label: "Facebook odkaz", name: "fb_link", widget: "string", required: false }
       - { label: "Odkaz na vstupenky", name: "tickets_link", widget: "string", required: false }
       - { label: "Pozvánka", name: "invitation", widget: "file", required: false }
-      - { label: "Obrázek", name: "image", widget: "image", required: false }
+      - { label: "Obrázek (šířka 400px)", name: "image", widget: "image", required: false }
 
   # Repertoár (Songs)
   - name: "repertoar"
