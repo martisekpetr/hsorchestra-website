@@ -1,5 +1,5 @@
 ---
-datetime: 2026-03-10 20:00
+datetime: 2026-03-02 20:00
 place: Stodola Kobylisy
 title: Swingový večer s HSO
 description: >-
