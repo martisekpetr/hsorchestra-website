@@ -1,10 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false, // Static site generation for GitHub Pages
+  ssr: true, // Enable SSR for static site generation
 
   // Set base URL for GitHub Pages
   app: {
-    baseURL: '/hsorchestra-website/', // Your repo name
+    baseURL: '/', // Your repo name
   },
 
   modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/eslint', '@vesp/nuxt-fontawesome'],

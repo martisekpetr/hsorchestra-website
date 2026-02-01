@@ -15,10 +15,10 @@ hero:
   title: Horáček Swing Orchestra
   subtitle: Welcome to the Horáček Swing Orchestra website. We are a big band
     playing mainly swing, dance and film music. Come and listen to us at one of
-    our concerts in Prague and surroundings. We'd also be happy to play at your
-    event.
+    our concerts in Prague and surrounding areas. We'd also be happy to play at
+    your event.
 upcomingConcerts:
-  heading: Upcoming Performances
+  heading: Upcoming events
   moreButton: More
   noConcerts: No events are currently scheduled.
 about:
@@ -28,7 +28,7 @@ about:
     and Zdeněk, all graduates of Adolf Voborský Art School. Until April 2013,
     Miroslav Horáček was the bandleader, after which his younger brother Jakub
     Horáček took over for nine years. Since January 2022, the orchestra has been
-    led by Petr Martišek and Štěpánka Tomášová. For many years, our home venue
+    led by Petr Martišek and Štěpánka Martišková. For many years, our home venue
     was the U Staré paní jazz club in the Old Town, which we said goodbye to in
     November 2016. An interesting event in 2017 was a charity concert on
     Střelecký Island, where Matěj Ruppert sang with us. In 2017 we also
@@ -40,7 +40,7 @@ about:
     complete instrumental section and both male and female lead vocals, the
     orchestra frequently collaborates with guest vocalists to deliver intricate
     five-part harmonies from the stage. We organize our own concerts and dance
-    evenings, most often in Vinohrady Brewery or Theatre za Plotem, but we try
+    evenings, most often in Vinohradský pivovar or Divadlo za Plotem, but we try
     to discover new venues as well. We also gladly play at balls, corporate
     events or weddings. We are not a professional ensemble, but we love playing
     and we are a reliable, friendly collective of enthusiasts.
@@ -70,7 +70,7 @@ members:
     flute: flute
     baritoneSax: baritone saxophone
     altoSax: alto saxophone
-    conductor: conductor
+    conductor: bandleader
     piano: piano
     trumpet: trumpet
     guitar: guitar
@@ -100,7 +100,7 @@ concerts:
   past: Past
   invitation: invitation
   upcoming: Upcoming
-  fbEvent: fb event
+  fbEvent: facebook event
 repertoire:
   pageTitle: Repertoire
   intro: Our repertoire is characterized by a wide genre range, from classic swing
