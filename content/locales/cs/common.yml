@@ -19,7 +19,6 @@ hero:
     akci.
 upcomingConcerts:
   heading: Nadcházející vystoupení
-  moreButton: Více
   noConcerts: Momentálně nejsou naplánované žádné koncerty.
 about:
   historyText: "Big band vznikl v březnu 2009, kdy jsme se osamostatnili od ZŠ
@@ -46,7 +45,6 @@ about:
     přátelský kolektiv nadšenců.
   eventPerformanceHeading: Hraní na Vaší akci
   historyHeading: Historie
-  repertoireLink: repertoár
   eventPerformanceParagraph1: Rádi Vám zahrajeme na Vašem plese, firemní akci,
     svatbě či jiné události. Pro představu o tom, co všechno Vám můžeme zahrát,
     si můžete prohlédnout náš [repertoár](/repertoar). Rádi nacvičíme i malé
@@ -54,7 +52,6 @@ about:
     dostatečným předstihem. Včasná rezervace je ostatně důležitá i proto, aby
     všichni muzikanti měli volný termín a my Vám mohli zahrát v plné parádě. Tři
     měsíce předem většinou stačí, měsíc už je hraniční.
-  contactLink: Kontaktujte
   eventPerformanceParagraph2: Naším velkým plusem je, že máme vlastní vybavení a
     také zvukaře, kterým je Kuba Horáček, náš bývalý kapelník. Jsme ale
     samozřejmě také schopni pracovat s Vaším vybraným zvukařem.
@@ -62,9 +59,6 @@ about:
     [Kontaktujte nás](/#kontakt) nás a domluvíme detaily.
 members:
   heading: Nástrojové obsazení
-  noMembers: Žádní členové nejsou evidováni.
-  instruments: Nástroje
-  status: Status
   instrumentNames:
     trombone: pozoun
     flute: flétna
@@ -80,8 +74,6 @@ members:
     vocals: zpěv
     bass: baskytara
 videos:
-  heading: Videa
-  noVideos: Žádná videa nejsou k dispozici.
 contact:
   heading: Kontakt
   intro: Máte zájem o vystoupení našeho orchestru na Vaší akci? Neváhejte a ozvěte
@@ -91,13 +83,10 @@ contact:
   phone: "Telefon:"
   socialPrompt: "Chcete se včas dozvědět o nadcházejících koncertech? Sledujte nás
     na sociálních sítích:"
-  noContactInfo: Kontaktní informace nejsou k dispozici.
 concerts:
   noPastConcerts: Žádné proběhlé koncerty nejsou v databázi.
-  place: "Místo:"
   tickets: vstupenky
   pageTitle: Koncerty
-  date: "Datum:"
   past: Minulé
   invitation: pozvánka
   upcoming: Nadcházející
@@ -108,17 +97,8 @@ repertoire:
     swingových šlágrů přes známé filmové melodie až po rockové a rock'n'rollové
     pecky. Nechybí rovněž skladby vhodné pro taneční playlist pro příležitost
     plesů a podobných akcí.
-  songList: Seznam písní
   noSongs: Repertoár je momentálně prázdný.
-  viewConcerts: Zobrazit koncerty
 common:
-  showAll: Zobrazit všechny
   more: Více
-  back: Zpět
-  loading: Načítání...
-  error: Došlo k chybě
 footer:
   copyright: Horáček Swing Orchestra. Všechna práva vyhrazena.
-  instagram: Instagram
-  facebook: Facebook
-  youtube: YouTube

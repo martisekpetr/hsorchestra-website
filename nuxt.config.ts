@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     locales: [
       { code: 'cs', language: 'cs-CZ', name: 'Čeština', switcherLabel: 'CZ' },
       { code: 'en', language: 'en-US', name: 'English', switcherLabel: 'EN' },
-      { code: 'de', language: 'de-DE', name: 'Deutsch', switcherLabel: 'DE' },
+      // { code: 'de', language: 'de-DE', name: 'Deutsch', switcherLabel: 'DE' },
     ],
     defaultLocale: 'cs',
     strategy: 'prefix_except_default', // URLs: /en/page, /de/page, /page (for default cs)

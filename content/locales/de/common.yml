@@ -19,7 +19,6 @@ hero:
     bei Ihrer Veranstaltung.
 upcomingConcerts:
   heading: Kommende Auftritte
-  moreButton: Mehr
   noConcerts: Derzeit sind keine Konzerte geplant.
 about:
   historyText: "Die Big Band wurde im März 2009 gegründet, als wir uns von der
@@ -48,7 +47,6 @@ about:
     zuverlässiges, freundliches Kollektiv von Enthusiasten.
   eventPerformanceHeading: Auftritte bei Ihrer Veranstaltung
   historyHeading: Geschichte
-  repertoireLink: Repertoire
   eventPerformanceParagraph1: Gerne spielen wir auf Ihrem Ball, Ihrer
     Firmenveranstaltung, Hochzeit oder anderen Anlässen. Um eine Vorstellung
     davon zu bekommen, was wir für Sie spielen können, schauen Sie sich unser
@@ -57,7 +55,6 @@ about:
     werden. Eine frühzeitige Buchung ist auch wichtig, um sicherzustellen, dass
     alle Musiker verfügbar sind und wir in Bestform auftreten können. Drei
     Monate im Voraus reichen normalerweise aus, ein Monat ist grenzwertig.
-  contactLink: Kontaktieren
   eventPerformanceParagraph2: Unser großer Vorteil ist, dass wir eigene Ausrüstung
     und einen Tontechniker haben, nämlich Kuba Horáček, unseren ehemaligen
     Bandleader. Wir können aber natürlich auch mit Ihrem gewählten Tontechniker
@@ -67,9 +64,6 @@ about:
     besprechen die Details.
 members:
   heading: Instrumentierung
-  noMembers: Keine Mitglieder registriert.
-  instruments: Instrumente
-  status: Status
   instrumentNames:
     trombone: Posaune
     flute: Flöte
@@ -85,8 +79,6 @@ members:
     vocals: Gesang
     bass: Bass
 videos:
-  heading: Videos
-  noVideos: Keine Videos verfügbar.
 contact:
   heading: Kontakt
   intro: Interessiert an einem Auftritt unseres Orchesters bei Ihrer
@@ -96,13 +88,10 @@ contact:
   phone: "Telefon:"
   socialPrompt: "Möchten Sie über bevorstehende Konzerte informiert bleiben?
     Folgen Sie uns in den sozialen Medien:"
-  noContactInfo: Kontaktinformationen sind nicht verfügbar.
 concerts:
   noPastConcerts: Keine vergangenen Konzerte in der Datenbank.
-  place: "Ort:"
   tickets: Tickets
   pageTitle: Konzerte
-  date: "Datum:"
   past: Vergangene
   invitation: Einladung
   upcoming: Kommende
@@ -113,17 +102,8 @@ repertoire:
     klassischen Swing-Hits über bekannte Filmmelodien bis hin zu Rock- und
     Rock'n'Roll-Klassikern. Es gibt auch Stücke, die sich für Tanz-Playlists für
     Bälle und ähnliche Veranstaltungen eignen.
-  songList: Liedliste
   noSongs: Das Repertoire ist derzeit leer.
-  viewConcerts: Konzerte anzeigen
 common:
-  showAll: Alle anzeigen
   more: Mehr
-  back: Zurück
-  loading: Lädt...
-  error: Ein Fehler ist aufgetreten
 footer:
   copyright: Horáček Swing Orchestra. Alle Rechte vorbehalten.
-  instagram: Instagram
-  facebook: Facebook
-  youtube: YouTube

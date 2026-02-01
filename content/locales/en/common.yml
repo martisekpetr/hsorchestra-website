@@ -19,7 +19,6 @@ hero:
     your event.
 upcomingConcerts:
   heading: Upcoming events
-  moreButton: More
   noConcerts: No events are currently scheduled.
 about:
   historyText: "The big band was founded in March 2009, when we became independent
@@ -46,7 +45,6 @@ about:
     and we are a reliable, friendly collective of enthusiasts.
   eventPerformanceHeading: Playing at Your Event
   historyHeading: History
-  repertoireLink: repertoire
   eventPerformanceParagraph1: We'd be happy to play at your ball, corporate event,
     wedding or other occasion. To get an idea of what we can play for you, check
     out our [repertoire](/repertoar). We're also happy to rehearse a small
@@ -54,7 +52,6 @@ about:
     well in advance. Early booking is also important to ensure all musicians are
     available and we can perform at our best. Three months in advance is usually
     enough, one month is borderline.
-  contactLink: Contact
   eventPerformanceParagraph2: Our great advantage is that we have our own
     equipment and sound engineer, who is Kuba Horáček, our former bandleader.
     But we are of course also able to work with your chosen sound engineer.
@@ -62,9 +59,6 @@ about:
     [Contact us](/#kontakt) and we'll arrange the details.
 members:
   heading: Members
-  noMembers: No members are registered.
-  instruments: Instruments
-  status: Status
   instrumentNames:
     trombone: trombone
     flute: flute
@@ -80,8 +74,6 @@ members:
     vocals: vocals
     bass: bass
 videos:
-  heading: Videos
-  noVideos: No videos available.
 contact:
   heading: Contact
   intro: Interested in having our orchestra perform at your event? Don't hesitate
@@ -90,13 +82,10 @@ contact:
   email: "Email:"
   phone: "Phone:"
   socialPrompt: "Want to stay informed about upcoming events? Follow us on social media:"
-  noContactInfo: Contact information is not available.
 concerts:
   noPastConcerts: No past events in the database.
-  place: "Venue:"
   tickets: tickets
   pageTitle: Events
-  date: "Date:"
   past: Past
   invitation: invitation
   upcoming: Upcoming
@@ -106,17 +95,8 @@ repertoire:
   intro: Our repertoire is characterized by a wide genre range, from classic swing
     hits through famous film melodies to rock and rock'n'roll classics. There
     are also songs suitable for dance playlists for balls and similar events.
-  songList: Song List
   noSongs: The repertoire is currently empty.
-  viewConcerts: View concerts
 common:
-  showAll: Show all
   more: More
-  back: Back
-  loading: Loading...
-  error: An error occurred
 footer:
   copyright: Horáček Swing Orchestra. All rights reserved.
-  instagram: Instagram
-  facebook: Facebook
-  youtube: YouTube
