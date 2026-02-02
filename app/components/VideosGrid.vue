@@ -1,21 +1,19 @@
 <script setup lang="ts">
 import emblaCarouselVue from 'embla-carousel-vue'
+import { extractYoutubeVideoId } from '~/utils/youtube'
 
-// Load videos data directly in the component
 const { data: videos } = await useAsyncData('videos', () => queryCollection('videos').all())
 
-// Sort videos by order
 const sortedVideos = computed(() => {
   if (!videos.value) return []
   return [...videos.value].sort((a: any, b: any) => (a.order || 0) - (b.order || 0))
 })
 
-// Helper function to get YouTube thumbnail URL
-const getThumbnailUrl = (videoId: string) => {
-  return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+const getThumbnailUrl = (url: string) => {
+  const videoId = extractYoutubeVideoId(url)
+  return videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : ''
 }
 
-// Initialize Embla Carousel
 const [emblaRef, emblaApi] = emblaCarouselVue({
   loop: true,
   align: 'start',
@@ -25,11 +23,9 @@ const [emblaRef, emblaApi] = emblaCarouselVue({
   dragFree: false,
 })
 
-// Navigation functions
 const scrollPrev = () => emblaApi.value?.scrollPrev()
 const scrollNext = () => emblaApi.value?.scrollNext()
 
-// Dot navigation state
 const selectedIndex = ref(0)
 const scrollSnaps = ref<number[]>([])
 
@@ -45,21 +41,26 @@ watchEffect(() => {
 
 const scrollTo = (index: number) => emblaApi.value?.scrollTo(index)
 
-// Modal state
 const modalVisible = ref(false)
-const currentVideoId = ref('')
+const currentVideoUrl = ref('')
 const iframeLoading = ref(false)
 
-// Functions
-const openVideo = (videoId: string) => {
-  currentVideoId.value = videoId
+const embedUrl = computed(() => {
+  if (!currentVideoUrl.value) return ''
+  const videoId = extractYoutubeVideoId(currentVideoUrl.value)
+  if (!videoId) return ''
+  return `https://www.youtube.com/embed/${videoId}?autoplay=1`
+})
+
+const openVideo = (url: string) => {
+  currentVideoUrl.value = url
   modalVisible.value = true
   iframeLoading.value = true
 }
 
 const closeModal = () => {
   modalVisible.value = false
-  currentVideoId.value = ''
+  currentVideoUrl.value = ''
 }
 
 const onIframeLoad = () => {
@@ -81,9 +82,9 @@ watch(modalVisible, newVal => {
     <!-- Embla Carousel -->
     <div ref="emblaRef" class="embla">
       <div class="embla__container">
-        <div v-for="video in sortedVideos" :key="video.videoId" class="embla__slide">
-          <div class="embla__slide__inner" @click="openVideo(video.videoId)">
-            <img :src="getThumbnailUrl(video.videoId)" :alt="video.description" />
+        <div v-for="video in sortedVideos" :key="video.url" class="embla__slide">
+          <div class="embla__slide__inner" @click="openVideo(video.url)">
+            <img :src="getThumbnailUrl(video.url)" :alt="video.description" />
             <div class="play-button-overlay">
               <div class="play-button">▶</div>
             </div>
@@ -141,8 +142,9 @@ watch(modalVisible, newVal => {
 
             <!-- YouTube iframe -->
             <iframe
+              v-if="embedUrl"
               v-show="!iframeLoading"
-              :src="`https://www.youtube.com/embed/${currentVideoId}?autoplay=1`"
+              :src="embedUrl"
               frameborder="0"
               allow="
                 accelerometer;
@@ -155,6 +157,11 @@ watch(modalVisible, newVal => {
               allowfullscreen
               @load="onIframeLoad"
             />
+
+            <!-- Error state -->
+            <div v-if="!embedUrl && !iframeLoading" class="error-message">
+              Unable to load video. Invalid YouTube URL.
+            </div>
           </div>
         </div>
       </Teleport>
@@ -437,5 +444,18 @@ watch(modalVisible, newVal => {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Error message */
+.error-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 0, 0, 0.8);
+  border-radius: 8px;
 }
 </style>

@@ -94,11 +94,11 @@ collections:
     format: 'frontmatter'
     folder: "content/videos"
     create: true
-    identifier_field: "videoId"
+    identifier_field: "url"
     slug: "{{slug}}"
     sortable_fields: ["order"]
     fields:
-      - { label: "YouTube Video ID", name: "videoId", widget: "string" }
+      - { label: "YouTube URL", name: "url", widget: "string", hint: "Zadejte celou URL adresu YouTube videa (např. https://www.youtube.com/watch?v=VIDEO_ID)" }
       - { label: "Popis", name: "description", widget: "string" }
       - { label: "Pořadí", name: "order", widget: "number", value_type: "int", required: false }
   

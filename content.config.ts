@@ -30,7 +30,25 @@ const membersSchema = z.object({
 
 // Videos schema
 const videosSchema = z.object({
-  videoId: z.string(),
+  url: z
+    .string()
+    .url('Must be a valid URL')
+    .refine(
+      url => {
+        try {
+          const urlObj = new URL(url)
+          return (
+            urlObj.hostname === 'www.youtube.com' ||
+            urlObj.hostname === 'youtube.com' ||
+            urlObj.hostname === 'youtu.be' ||
+            urlObj.hostname === 'm.youtube.com'
+          )
+        } catch {
+          return false
+        }
+      },
+      { message: 'Must be a valid YouTube URL' }
+    ),
   description: z.string(),
   order: z.number().optional(),
 })
