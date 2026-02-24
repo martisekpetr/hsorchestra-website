@@ -1,6 +1,7 @@
 ---
-name: "Kateřina Hellerová"
+name: Kateřina Hellerová
 instrument:
-  - "flute"
-status: "active"
+  - flute
+order: 10
+status: inactive
 ---
