@@ -1,6 +1,6 @@
 ---
 title: Foto 6
-image: /images/uploads/hso-pivovar.jpeg
-thumbnail: /images/uploads/hso-pivovar-thumb.jpeg
+image: /images/uploads/hso-voc.jpeg
+thumbnail: /images/uploads/hso-voc-thumb.jpeg
 order: 6
 ---
