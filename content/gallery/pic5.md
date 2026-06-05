@@ -1,6 +1,6 @@
 ---
-title: 'Foto 5'
-image: '/images/frontpage/pic5.jpg'
-thumbnail: '/images/frontpage/pic5_thumb.jpg'
+title: Foto 5
+image: /images/uploads/hso_small-33.jpg
+thumbnail: /images/uploads/hso_small-33-thumb.jpg
 order: 5
 ---
