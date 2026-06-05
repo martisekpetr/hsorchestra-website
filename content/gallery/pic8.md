@@ -1,6 +1,6 @@
 ---
-title: 'Foto 8'
-image: '/images/frontpage/pic8.jpg'
-thumbnail: '/images/frontpage/pic8_thumb.jpg'
+title: Foto 8
+image: /images/uploads/hso-pivovar-zakulisi.jpeg
+thumbnail: /images/uploads/hso-pivovar-zakulisi-thumb.jpeg
 order: 8
 ---
