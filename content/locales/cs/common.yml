@@ -20,6 +20,7 @@ hero:
 upcomingConcerts:
   heading: Nadcházející vystoupení
   noConcerts: Momentálně nejsou naplánované žádné koncerty.
+  moreButton: Tlačítko více
 about:
   historyText: "Big band vznikl v březnu 2009, kdy jsme se osamostatnili od ZŠ
     prof. Švejcara na Praze 4, kde jsme působili jako školní kapela.
@@ -27,10 +28,10 @@ about:
     absolventi ZUŠ Adolfa Voborského. Do dubna 2013 byl kapelníkem Miroslav
     Horáček, poté po něm žezlo na devět let převzal jeho mladší bratr Jakub
     Horáček. Od ledna 2022 se o vedení orchestru starají Petr Martišek a
-    Štěpánka Tomášová. Dlouhá léta nám byl domácí scénou jazzklub U Staré paní
+    Štěpánka Martišková. Dlouhá léta nám byl domácí scénou jazzklub U Staré paní
     na Starém městě, se kterým jsme se rozloučili v listopadu 2016. Zajímavou
     akcí roku 2017 byl charitativní koncert na Střeleckém ostrově, kde si s námi
-    zazpíval Matěj Ruppert. V roce 2017 jsme se také zúčastinili Polenského
+    zazpíval Matěj Ruppert. V roce 2017 jsme se také zúčastnili Polenského
     swingového festivalu."
   heading: O nás
   mainText: Horáček Swing Orchestra je pražský big band hrající swingovou,
@@ -41,10 +42,10 @@ about:
     můžete vychutnat až pětihlasé melodie. Pořádáme vlastní koncerty a taneční
     večery, nejčastěji ve Vinohradském pivovaru či v Divadle za Plotem, ale rádi
     objevujeme i nová místa. Také rádi zahrajeme na plese, firemní akci či
-    svatbě. Nejsme profesionální těleso, ale hraní nás baví a jsme spolehlivý,
-    přátelský kolektiv nadšenců.
+    svatbě. Hraní nás baví a jsme spolehlivý, přátelský kolektiv nadšenců.
   eventPerformanceHeading: Hraní na Vaší akci
   historyHeading: Historie
+  repertoireLink: link
   eventPerformanceParagraph1: Rádi Vám zahrajeme na Vašem plese, firemní akci,
     svatbě či jiné události. Pro představu o tom, co všechno Vám můžeme zahrát,
     si můžete prohlédnout náš [repertoár](/repertoar). Rádi nacvičíme i malé
@@ -52,6 +53,7 @@ about:
     dostatečným předstihem. Včasná rezervace je ostatně důležitá i proto, aby
     všichni muzikanti měli volný termín a my Vám mohli zahrát v plné parádě. Tři
     měsíce předem většinou stačí, měsíc už je hraniční.
+  contactLink: link
   eventPerformanceParagraph2: Naším velkým plusem je, že máme vlastní vybavení a
     také zvukaře, kterým je Kuba Horáček, náš bývalý kapelník. Jsme ale
     samozřejmě také schopni pracovat s Vaším vybraným zvukařem.
@@ -73,7 +75,12 @@ members:
     clarinet: klarinet
     vocals: zpěv
     bass: baskytara
+  noMembers: Žádní členové
+  instruments: Nástroje
+  status: Status
 videos:
+  heading: Videa
+  noVideos: Žádná videa
 contact:
   heading: Kontakt
   intro: Máte zájem o vystoupení našeho orchestru na Vaší akci? Neváhejte a ozvěte
@@ -83,10 +90,13 @@ contact:
   phone: "Telefon:"
   socialPrompt: "Chcete se včas dozvědět o nadcházejících koncertech? Sledujte nás
     na sociálních sítích:"
+  noContactInfo: Žádný kontakt
 concerts:
   noPastConcerts: Žádné proběhlé koncerty nejsou v databázi.
+  place: Místo
   tickets: vstupenky
   pageTitle: Koncerty
+  date: Datum
   past: Minulé
   invitation: pozvánka
   upcoming: Nadcházející
@@ -98,7 +108,16 @@ repertoire:
     pecky. Nechybí rovněž skladby vhodné pro taneční playlist pro příležitost
     plesů a podobných akcí.
   noSongs: Repertoár je momentálně prázdný.
+  songList: Seznam písní
+  viewConcerts: Zobrazit koncerty
 common:
   more: Více
+  showAll: Zobrazit vše
+  back: zpět
+  loading: načítání
+  error: chyba
 footer:
   copyright: Horáček Swing Orchestra. Všechna práva vyhrazena.
+  instagram: Instagram
+  facebook: Facebook
+  youtube: Youtube
