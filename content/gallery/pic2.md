@@ -1,6 +1,6 @@
 ---
-title: 'Foto 2'
-image: '/images/frontpage/pic2.jpg'
-thumbnail: '/images/frontpage/pic2_thumb.jpg'
+title: Foto 2
+image: /images/uploads/hso_small-64.jpg
+thumbnail: /images/uploads/hso_small-64_smaller.jpg
 order: 2
 ---
