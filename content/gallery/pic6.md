@@ -1,6 +1,6 @@
 ---
-title: 'Foto 6'
-image: '/images/frontpage/pic6.jpg'
-thumbnail: '/images/frontpage/pic6_thumb.jpg'
+title: Foto 6
+image: /images/uploads/hso-pivovar.jpeg
+thumbnail: /images/uploads/hso-pivovar-thumb.jpeg
 order: 6
 ---
