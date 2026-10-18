@@ -1,6 +1,7 @@
 ---
-name: "Vít Hofman"
+name: Vojtěch Kotek
 instrument:
-  - "drums"
-status: "active"
+  - drums
+order: 1
+status: active
 ---
