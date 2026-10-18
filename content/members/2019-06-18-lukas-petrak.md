@@ -1,6 +1,7 @@
 ---
-name: "Lukáš Petrák"
+name: Jan Kubín
 instrument:
-  - "piano"
-status: "active"
+  - piano
+order: 1
+status: active
 ---
