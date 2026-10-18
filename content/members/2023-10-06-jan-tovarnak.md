@@ -1,7 +1,7 @@
 ---
-name: "Ján Tovarňák"
+name: Ján Tovarňák
 instrument:
-  - "trumpet"
+  - trumpet
 order: 3
-status: "active"
+status: inactive
 ---
